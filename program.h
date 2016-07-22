@@ -1,10 +1,10 @@
-/* Player H file. */
+/* Program H file. */
 #include <string>
 
-#ifndef __PLAYER_H_INCLUDED__
-#define __PLAYER_H_INCLUDED__
+#ifndef __PROGRAM_H_INCLUDED__
+#define __PROGRAM_H_INCLUDED__
 
-class Player {
+class Program {
 protected:
 	int function_count; //For remembering which function we call next
 	bool modify_integrity(int modifier);
@@ -15,7 +15,7 @@ protected:
 	int integrity;
 	int initiative;
 public:
-	Player(std::string name, int skill, int initiative);
+	Program(std::string name, int skill, int initiative);
 	int action(); // Since the mainloop executes this function, it must be public.
 };
 

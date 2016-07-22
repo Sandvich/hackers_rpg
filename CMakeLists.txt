@@ -7,5 +7,5 @@ set(CMAKE_CXX_COMPILER "/usr/bin/g++")
 set(CMAKE_AR "/usr/bin/ar")
 set(CMAKE_LINKER "/usr/bin/g++")
 
-set(SOURCE_FILES player.h player.cpp test.cpp)
+set(SOURCE_FILES program.h program.cpp test.cpp)
 add_executable(hackers_rpg ${SOURCE_FILES})
