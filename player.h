@@ -15,7 +15,7 @@ protected:
 	int integrity;
 	int initiative;
 public:
-	Player(std::string name, int integrity, int initiative);
+	Player(std::string name, int skill, int initiative);
 	int action(); // Since the mainloop executes this function, it must be public.
 };
 

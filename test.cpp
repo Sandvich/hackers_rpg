@@ -3,6 +3,6 @@
 #include "player.h"
 
 int main() {
-	Player *p = new Player("Name", 50, 10);
+	Player *p = new Player("Name", 15, 10);
 	return 0;
 }
