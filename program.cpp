@@ -21,7 +21,11 @@ bool Program::modify_integrity(int modifier) {
 	} else {
 		return true;
 	}
-};
+}
+
+void Program::modify_initiative(int modifier) {
+	this->initiative = this->initiative + modifier;
+}
 
 int Program::action() {
 	// Code to decide which predefined function to execute.
