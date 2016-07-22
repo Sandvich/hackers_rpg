@@ -10,19 +10,19 @@ Player::Player(std::string name, int integrity, int initiative) {
 	this->integrity = integrity;
 	this->initiative = initiative;
 	this->function_count = 0;
-	cout << "Successfully created combatant with name: " << name << endl;
+	std::cout << "Successfully created combatant with name: " << name << std::endl;
 }
 
-Player::modify_integrity(int modifier) {
-	this->integrity = this->integrity + modifier
+bool Player::modify_integrity(int modifier) {
+	this->integrity = this->integrity + modifier;
 	if (this->integrity <= 1) {
-		return false
+		return false;
 	} else {
-		return true
+		return true;
 	}
 };
 
-Player::action() {
+int Player::action() {
 	// Code to decide which predefined function to execute.
 	return this->function_count;
 }

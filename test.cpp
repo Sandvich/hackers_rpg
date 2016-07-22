@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
-#include <player.h>
+#include "player.h"
 
 int main() {
 	Player *p = new Player("Name", 50, 10);
-	return 0
+	return 0;
 }

@@ -4,7 +4,7 @@
 #ifndef __PLAYER_H_INCLUDED__
 #define __PLAYER_H_INCLUDED__
 
-class Player() {
+class Player {
 	int function_count; //For remembering which function we call next
 	bool modify_integrity(int modifier);
 	/* Most player-defined functions should go here,
