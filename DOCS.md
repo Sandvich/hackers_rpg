@@ -21,7 +21,7 @@ Each code block inserted into a program increases its *initiative* (see below) b
 
 Certain code blocks have special limitations on their use:
 * A block prefaced by "public:" **must** be placed into a public member function (*action* is allowed). This means that any other program could, in theory, execute said function.
-* Several blocks contain the code "this->acted = true;" - a maximum of one of these can be executed each turn.
+* Several blocks contain the code "this->acted = true;". These are termed *standard blocks*, others being termed *free blocks*. A maximum of one standard block can be executed each turn.
 
 ## Initiative and Integrity
 *Initiative* is the number of *code blocks* used in the program. It is not calculated automatically (yet?). The lower the number, the more often and more quickly the program will take turns.
