@@ -7,7 +7,7 @@ void PlayerOne::report() {
 
 void PlayerOne::retreat() {
 	std::cout << "Retreating from combat." << std::endl;
-	this->integrity = 0;
+	delete(this);
 }
 
 int PlayerOne::action() {

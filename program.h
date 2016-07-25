@@ -17,7 +17,9 @@ protected:
 	int initiative;
 public:
 	Program(std::string name, int skill, int initiative);
+	~Program();
 	int action(); // Since the mainloop executes this function, it must be public.
+	void attacked(int damage);
 };
 
 #endif

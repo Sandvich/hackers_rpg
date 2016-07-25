@@ -14,6 +14,10 @@ Program::Program(std::string name, int skill, int initiative) {
 	std::cout << "Combatant has integrity: " << this->integrity << std::endl;
 }
 
+Program::~Program() {
+	std::cout << this->name << " is out of the battle!" << std::endl;
+}
+
 bool Program::modify_integrity(int modifier) {
 	this->integrity = this->integrity + modifier;
 	if (this->integrity <= 1) {
@@ -25,6 +29,15 @@ bool Program::modify_integrity(int modifier) {
 
 void Program::modify_initiative(int modifier) {
 	this->initiative = this->initiative + modifier;
+}
+
+void Program::attacked(int damage) {
+	std::cout << this->name << " was attacked for " << damage << " points of damage!" << std::endl;
+	bool alive = this->modify_integrity(-damage);
+	std::cout << this->integrity << " integrity remaining." << std::endl;
+	if (!alive) {
+		delete(this);
+	}
 }
 
 int Program::action() {
