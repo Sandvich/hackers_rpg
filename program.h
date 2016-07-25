@@ -6,6 +6,7 @@
 
 class Program {
 protected:
+	~Program();
 	int function_count; //For remembering which function we call next
 	bool modify_integrity(int modifier);
 	void modify_initiative(int modifier);
@@ -17,7 +18,6 @@ protected:
 	int initiative;
 public:
 	Program(std::string name, int skill, int initiative);
-	~Program();
 	int action(); // Since the mainloop executes this function, it must be public.
 	void attacked(int damage);
 };
