@@ -11,6 +11,7 @@ Program::Program(std::string name, int skill, int initiative) {
 	this->initiative = initiative;
 	this->starting_integrity = integrity;
 	this->function_count = 0;
+	this->acted = false;
 	std::cout << "Successfully created combatant with name: " << name << std::endl;
 	std::cout << "Combatant has integrity: " << this->integrity << std::endl;
 }

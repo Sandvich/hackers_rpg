@@ -21,6 +21,7 @@ public:
 	Program(std::string name, int skill, int initiative);
 	int action(); // Since the mainloop executes this function, it must be public.
 	void attacked(int damage);
+	bool acted;
 	/* A few player-defined functions must go here - they will be explicitly mentioned
 	 * by the code blocks in question (particularly powerful blocks may insist on being
 	 * public to limit their usefulness.*/
