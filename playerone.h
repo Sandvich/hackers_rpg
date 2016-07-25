@@ -7,6 +7,7 @@
 class PlayerOne: public Program {
 	void report();
 	void retreat();
+	void heal(int amount);
 public:
 	int action();
 	using Program::Program;

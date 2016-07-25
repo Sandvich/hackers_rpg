@@ -12,6 +12,7 @@ protected:
 	void modify_initiative(int modifier);
 	std::string name;
 	int integrity;
+	int starting_integrity;
 	int initiative;
 	/* Most player-defined functions should go here,
 	 * This is because they should not be accesible by other objects - said other objects will

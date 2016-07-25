@@ -11,5 +11,6 @@ int main() {
 	player->attacked(10);
 	player->action();
 	p->attacked(70);
+	player->action();
 	return 0;
 }

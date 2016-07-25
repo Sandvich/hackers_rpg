@@ -10,12 +10,22 @@ void PlayerOne::retreat() {
 	delete(this);
 }
 
+void PlayerOne::heal(int amount) {
+	std::cout << "Attempting to heal " << amount << " points of integrity." << std::endl;
+	this->modify_integrity(amount);
+	std::cout << "New integrity is: " << this->integrity << std::endl;
+}
+
 int PlayerOne::action() {
 	std::cout << "Starting action phase wih character " << this->name << std::endl;
-	if (this->function_count>0) {
+	if (this->function_count>1) {
 		this->retreat();
 	} else {
-		this->report();
+		if (this->function_count == 1) {
+			this->heal(20);
+		} else {
+			this->report();
+		}
 	}
 	this->function_count++;
 	return this->function_count;

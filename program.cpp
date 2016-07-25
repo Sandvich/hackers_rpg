@@ -9,6 +9,7 @@ Program::Program(std::string name, int skill, int initiative) {
 	this->name = name;
 	this->integrity = (skill - initiative)*10;
 	this->initiative = initiative;
+	this->starting_integrity = integrity;
 	this->function_count = 0;
 	std::cout << "Successfully created combatant with name: " << name << std::endl;
 	std::cout << "Combatant has integrity: " << this->integrity << std::endl;
@@ -23,6 +24,9 @@ bool Program::modify_integrity(int modifier) {
 	if (this->integrity <= 1) {
 		return false;
 	} else {
+		if (this->integrity > this->starting_integrity) {
+			this->integrity = starting_integrity;
+		}
 		return true;
 	}
 }
